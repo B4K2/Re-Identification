@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+two_model/new_box
+two_model/new_box (1)
+two_model/new_seg
+two_model/new_segg

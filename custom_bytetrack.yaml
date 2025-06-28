@@ -1,0 +1,17 @@
+# ByteTrack Tunning Parameters for Sports Analytics
+
+# ---- Core Matching Thresholds ----
+track_high_thresh: 0.5  # High-confidence detection threshold for the first association.
+                       # A player must be detected with >50% confidence to be considered a primary match.
+
+track_low_thresh: 0.15  # Low-confidence threshold for the second association (the magic part).
+                       # If a track is lost, ByteTrack will look for faint detections >15% confidence to re-link it.
+
+new_track_thresh: 0.6   # A detection must be >60% confident to even be considered for starting a NEW track.
+                       # This is a key parameter to prevent false positives from becoming new tracks.
+
+# ---- Track Management ----
+track_buffer: 60        # The tracker's "memory". Number of frames to keep a track alive after it's lost.
+                       # 60 frames = 2 seconds at 30fps. This is crucial for handling occlusions.
+
+match_thresh: 0.8       # IOU threshold for matching. A high value makes it strict.
